@@ -2,10 +2,10 @@ title: "Redchar.X"
 author: "徐磊"
 email: xulei.home@163.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is my home page. Though my knowledge is shallow, I will keep on working hard.
+  Keep on working hard.There's always a straight way to the point you see.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-weibo_username: Manyghosts Xu
+weibo_username:  Manyghosts Xu
 github_username:  Redchar1992
 
 # Build settings
