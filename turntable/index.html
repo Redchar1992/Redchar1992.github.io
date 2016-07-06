@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Redchar.X</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div class="bg part2">
+	    <img src="images/20n.png" id="q20" style="display:none;" />
+	    <img src="images/30n.png" id="q30" style="display:none;" />
+	    <img src="images/50n.png" id="q50" style="display:none;" />
+	    <img src="images/100n.png" id="q100" style="display:none;" />
+	    <img src="images/baon.png" id="bao" style="display:none;" />
+	    <img src="images/6s.png" id="six" style="display:none;" />
+		<img src="images/images/db11_06.jpg" alt="">
+		<img src="images/images/db11_07.jpg" alt="">
+		<img src="images/images/db11_08.jpg" alt="">
+		<img src="images/images/db11_09.jpg" alt="">
+		<img src="images/images/db11_10.jpg" alt="">
+		<img src="images/images/db11_11.jpg" alt="">
+		<img src="images/images/db11_12.jpg" alt="">
+		<img src="images/images/db11_13.jpg" alt="">
+		<img src="images/images/db11_14.jpg" alt="">
+		<img src="images/images/db11_15.jpg" alt="">
+
+		<div class="banner" id="inp">
+			<div class="turnplate">
+				<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+				<canvas id="go" width="422px" height="422px"></canvas>
+				<div class="pointer" style="z-index:1;opacity:0;"></div>
+			</div>
+
+			<div class="ipt">
+				<div class="rule">活动规则</div>
+				<div class="tel"><input type="tel" name="mobileAccount" id="mobileAccount" value=""  placeholder="输入手机号后点提交" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" /></div>
+				<div class="reg"><input type="button" value="提交"></div>
+			</div>
+		</div>
+
+		<div class="mini_bd"></div>
+	</div>
+
+	<div class="board"></div>
+	<div class="popUp">
+		<div class="tan">
+			<img src="images/tan00.png" class="tanbg tan0"><img src="images/tan1.png" class="tanbg tan1">
+			<div class="tip_g1">很遗憾您没有中奖，请再接再厉。</div>
+			<div class="pbtns">
+				<a href="javascript:void(0)" class="share">分享给好友增加中奖几率</a>
+				<a href="#" class="down">下载APP</a>
+			</div>
+			<div class="close0"><input type="button" value="" class="close"></div>
+			<div class="key uncouple"></div><div class="key couple"></div>
+		</div>
+	</div>
+	<div class="rulePop">
+		<div class="tips">
+			<img src="images/key1.png" class="ruleKey"><img src="images/close2.png" class="ruleClose">
+			<ul class="rules">
+				<li><span class="rns">1、</span><span class="detail">这是一个模板</span></li>
+				<li><span class="rns">2、</span><span class="detail">这是一个模板</span></li>
+				<li><span class="rns">3、</span><span class="detail">这是一个模板</span></li>
+				<li><span class="rns">4、</span><span class="detail">这是一个模板</span></li>
+				<li><span class="rns">5、</span><span class="detail">这是一个模板</span></li>
+				<li><span class="rns">6、</span><span class="detail">这是一个模板</span></li>
+				<li><span class="rns">7、</span><span class="detail">恩，这是一个模板</span></li>
+			</ul>
+			<div class="end">本模板由Redchar.X提供，最终解释权归XXX所有。</div>
+		</div>
+	</div>
+	<div class="arrow"></div>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/awardRotate.js"></script>
+<script type="text/javascript" src="js/db11v2.2.js"></script>
+</body>
+</html>
