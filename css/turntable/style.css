@@ -1,0 +1,175 @@
+﻿body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+input{ font-size:12px;}
+a{ text-decoration:none; color:#000;}
+a:hover{color:#c00; text-decoration:none;}
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+.clear{clear:both;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after {content: ".";display: block;height: 0pt;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+.clearfix {display: block;}
+img{border: none !important;-webkit-border:none;}
+.css{-webkit-touch-callout: none};
+.tips{color: #783a3a;text-align: center;font-size: 14px;}
+input[type=button], input[type=submit], input[type=file], input[type=tel], button { cursor: pointer; -webkit-appearance: none; outline: none;border: none;}
+input::-ms-input-placeholder{text-align: center;color:#BF87B7 !important;}
+input::-webkit-input-placeholder{text-align: center;color:#BF87B7 !important;}
+input::input-placeholder { text-align: center ;color:#BF87B7 !important;}
+input[placeholder], [placeholder], *[placeholder] { color:#BF87B7 !important; }
+
+html{font-size: 62.5%;}
+body{
+	font-size: 1.2rem;
+	background:#C43D59;
+	width: 100%;
+	overflow-x:hidden;
+	font-family: 'microsoft yahei';
+	min-width: 310px;
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.back{position: absolute;top: 2%;left: 2%;width: 8%;height: auto;z-index: 19;}
+.bg img{width: 100%;}
+.part2{position: relative;}
+
+/* 大转盘样式 */
+.banner{
+	display:block;width:95%;margin-left:auto;margin-right:auto;/*95%*/
+	/*10.22*/
+	position: absolute; top: 20px;left: 50%;
+	-moz-transform: translate(-50%, -0%) !important;
+	-ms-transform: translate(-50%, -0%) !important;
+	-webkit-transform: translate(-50%, -0%) !important;
+	transform: translate(-50%, -0%) !important;
+}
+.banner .turnplate{
+	display:block;width:96%;height: 100%;border-radius: 100%; position:relative;background: transparent;
+	-webkit-box-shadow:0 0 10px #E54658;-moz-box-shadow:0 0 10px #E54658;box-shadow:0 0 10px #E54658;margin: 0 auto;
+}
+.banner .turnplate canvas.item{width:100%;}
+.banner .turnplate .pointer{position:absolute;width:31.5%;height:42.5%;left:34.6%;top:23%;z-index: 999;opacity: 0;}
+
+#go{position: absolute;width: 100%;top: 0px;left: 0px;}
+
+.jump{position: absolute;width: 35px;right: 1%;top: 15%;}
+.jump a{display: inline-block;}
+.jump span{width: 12px;display: inline-block;color: #fff;opacity: 0.6;}
+.jump img{width: 18px;margin-top: -64px;margin-left: 4px;}
+
+.ipt{width: 100%;text-align: center;padding-bottom: 20px;margin-top: 15px;position: relative;}
+.ipt div{width: 100%;text-align: center;}
+.ipt div.rule{
+	position: absolute;top: -35px;right: 5%;color: #ffdf67;font-size: 14px;font-style: italic;text-decoration: underline;
+	padding-right: 3px;text-align: right;
+}
+.ipt .tel input{width: 80%;text-align: center;font-size: 14px;padding: 12px 5%;color: #BF87B7;}
+.ipt .reg input{width: 90%;text-align: center;font-size: 14px;padding: 12px 0;}
+.reg{margin-top: 8px;}
+.reg input{background: #920783;color: #cfcfcf;}
+
+.mini_bd{
+	width: 65%;border-radius: 5px;background: #000;opacity: 0.85;color: #fff;text-align: center;padding: 15px 0;
+	position: fixed;
+	z-index:34567;
+	top: 50%;left: 50%;
+	max-width: 487.5px;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+
+.board{width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 11;background: #000;opacity: 0.6;display: none;}
+.popUp{
+	width: 90%;height: 170px;position: absolute;
+	position: fixed;
+	z-index:11111;
+	top: 50%;left: 50%;
+	min-width: 300px;
+	max-width: 500px;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+.popUp3{
+	width: 90%;height: 170px;position: absolute;
+	position: fixed;
+	z-index:11111;
+	top: 50%;left: 50%;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+.tan{
+	position: relative;width: 100%;height: 170px;
+}
+.tan .telNum2{position: absolute;top: 50px;width: 100%;text-align: center;}
+.tan .telNum2 input{width: 80%;text-align: center;font-size: 14px;padding: 12px 5%;color: #BF87B7;}
+.tan .tanbg{position:absolute;top:0;left:0;width: 100%;background: #ee6e81;border-radius: 5px;}
+.tan .tanbg .tan1{display: none;}
+.tan .tip_g1{text-align: center;position: absolute;top: 65px;width: 100%;height: 25px;font-size: 1.4rem;color: #fff;}
+.tan .tip_g1 span{  width: 241px;display: inline-block;margin-top: -5px;}
+.tan .pbtns{position: absolute;top: 110px;text-align: center;width: 100%;z-index: 11111;}
+.tan .pbtns a{background: #920783;padding: 13px 25px;font-size: 14px;color: #fff;border-radius: 5px;margin: 0 5px;}
+.tan .pbtns a.reg{width: 90%;border-radius: 0px;}
+.tan .pbtns a{display: inline-block;cursor: pointer;}
+.tan .pbtns .down{
+	background: #920783;padding: 13px 17px;font-size: 14px;color: #fff;border-radius: 5px;margin: 0 5px;
+	display: none;
+}
+.tan .close0{
+	width: 100%;height: 115px;position: absolute;right: 8px;top: 8px;z-index: 99999;text-align: right;
+}
+.tan .close0 .close{
+	background:url(https://redchar1992.github.io/Template/turntable/images/close.png) top right no-repeat;width:70px;height:70px;display:inline-block;
+	background-size: 30px 30px;
+}
+.tan .key{
+	position: absolute; top: -30px;left: 0px;/*display: none;*/
+}
+.tan .uncouple{width: 88px;height: 61px;background: url(https://redchar1992.github.io/Template/turntable/images/key00.png) no-repeat;background-size: 100% 100%;}
+.tan .couple{width: 76px;height: 68px;background: url(https://redchar1992.github.io/Template/turntable/images/key1.png) no-repeat;background-size: 100% 100%;}
+.arrow{
+	position: fixed;z-index: 9999;background: url(https://redchar1992.github.io/Template/turntable/images/arrow.png) no-repeat;width: 53px;height: 67px;
+	background-size: 100% 100%;right: 15px;top: 15px;display: none;
+}
+
+.rulePop{
+	width: 95%;position: absolute;/*height: 315px;*/
+	position: fixed;
+	z-index:11111;
+	top: 50%;left: 50%;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+.tips{position: relative;width: 100%;background: #93077A;border-radius: 5px;font-size: 14px;}
+.tips .ruleKey{width: 76px;display: inline-block;margin-top: -30px;margin-left: 2px;}
+.tips .ruleClose{width: 30px;display: inline-block;position: absolute;right: 8px;top: 8px;}
+.tips .rules{color: #cdcacd;opacity: 0.6;padding: 0 2.5%;margin: 20px 0 30px;}
+.tips .rules li{border-bottom: 1px solid #A92386;padding: 3px 0;}
+.tips .rules li .rns{vertical-align: top;}
+.tips .rules li .detail{display: inline-block;width: 92%;}
+.tips .end{color: #ffaf00;opacity: 0.7;text-align: center;padding-bottom: 15px;font-size: 13px;}
+
+@media screen and (max-width: 320px){.tan .pbtns input{  padding: 13px 5px !important;}}
+@media screen and (min-width: 420px){
+	.tan .tip_g1{font-size: 2rem;top: 30%;}
+	.tan .pbtns .down,.tan .pbtns .share{font-size: 2rem;padding: 13px 5%;}
+	.tan .pbtns .down{margin-left: 5%;}
+	.banner .turnplate{width: 80%;}
+}
