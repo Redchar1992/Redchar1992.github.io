@@ -70,7 +70,7 @@ $(document).ready(function(){
 	}
 	function load(){
 		var beauty = new Image();
-		beauty.src = "https://redchar1992.github.io/Template/turntable/images/start_100_y.png";
+		beauty.src = "https://redchar1992.github.io/img/turntable/start_100_y.png";
 		if(beauty.complete){drawBeauty(beauty);}
 		else{
 		    beauty.onload = function(){drawBeauty(beauty);};
