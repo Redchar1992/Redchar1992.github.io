@@ -133,16 +133,16 @@ body{
 	width: 100%;height: 115px;position: absolute;right: 8px;top: 8px;z-index: 99999;text-align: right;
 }
 .tan .close0 .close{
-	background:url(https://redchar1992.github.io/Template/turntable/images/close.png) top right no-repeat;width:70px;height:70px;display:inline-block;
+	background:url(https://redchar1992.github.io/img/turntable/close.png) top right no-repeat;width:70px;height:70px;display:inline-block;
 	background-size: 30px 30px;
 }
 .tan .key{
 	position: absolute; top: -30px;left: 0px;/*display: none;*/
 }
-.tan .uncouple{width: 88px;height: 61px;background: url(https://redchar1992.github.io/Template/turntable/images/key00.png) no-repeat;background-size: 100% 100%;}
-.tan .couple{width: 76px;height: 68px;background: url(https://redchar1992.github.io/Template/turntable/images/key1.png) no-repeat;background-size: 100% 100%;}
+.tan .uncouple{width: 88px;height: 61px;background: url(https://redchar1992.github.io/img/turntable/key00.png) no-repeat;background-size: 100% 100%;}
+.tan .couple{width: 76px;height: 68px;background: url(https://redchar1992.github.io/img/turntable/key1.png) no-repeat;background-size: 100% 100%;}
 .arrow{
-	position: fixed;z-index: 9999;background: url(https://redchar1992.github.io/Template/turntable/images/arrow.png) no-repeat;width: 53px;height: 67px;
+	position: fixed;z-index: 9999;background: url(https://redchar1992.github.io/img/turntable/arrow.png) no-repeat;width: 53px;height: 67px;
 	background-size: 100% 100%;right: 15px;top: 15px;display: none;
 }
 
