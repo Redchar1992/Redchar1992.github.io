@@ -387,6 +387,9 @@ input{
 		background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 26px 12px no-repeat;
 		background-size: 13px 13px;
 	}
+	.regPackets{
+		margin: 0 45px;
+	}
 }
 @media screen and (width: 360px){
 	.equipment .eqBtn .search{
