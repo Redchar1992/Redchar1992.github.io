@@ -53,6 +53,104 @@ input{
 	text-align: center;
 	border-radius: 3px;
 }
+/*index-a*/
+.tree{
+	text-align: center;
+	margin-top: 40%;
+}
+.tree img{
+	width: 80%;
+}
+.shake{
+	position: absolute;
+	right: 3%;
+	top: 24%;
+	width: 25%;
+}
+.shake img{
+	width: 100%;
+}
+.times{
+	position: absolute;
+	left: 6%;
+	width: 46%;
+	bottom: 7%;
+	background: url(https://redchar1992.github.io/img/816/piop.png) top no-repeat;
+	background-size: 100%;
+	padding-top: 25px;
+	height: 12%;
+}
+.times p{
+	color: #fff;
+	text-align: center;
+	line-height: 27px;
+}
+.times p span{
+	color: #F55128;
+}
+.boy{
+	position: absolute;
+	right: 2%;
+	width: 35%;
+	bottom: 0%;
+}
+.boy .person{
+	width: 100%;
+}
+.hand{
+	position: absolute;
+	right: 29%;
+	width: 15%;
+	bottom: 2%;
+}
+.hand img{
+	width: 100%;
+}
+.hand{animation: danM 2.5s linear infinite;}
+.hand{-webkit-animation: danM 2.5s linear infinite;}
+.hand{-o-animation: danM 2.5s linear infinite;}
+.hand{-moz-animation: danM 2.5s linear infinite;}
+.hand{-ms-animation: danM 2.5s linear infinite;}
+@keyframes danM{
+	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
+}
+@-webkit-keyframes danM{
+	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
+}
+@-o-keyframes danM{
+	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
+}
+@-moz-keyframes danM{
+	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
+}
+@-ms-keyframes danM{
+	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
+}
 /*index-b*/
 .regPackets{
 	margin: 40px 15px 0;
@@ -389,6 +487,10 @@ input{
 	}
 	.regPackets{
 		margin: 0 45px;
+		bottom: 45px;
+	}
+	.times{
+		padding-top: 18px;
 	}
 }
 @media screen and (width: 360px){
@@ -401,6 +503,9 @@ input{
 	.equipment .eqBtn .search{
 		background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 47px 12px no-repeat;
 		background-size: 13px 13px;
+	}
+	.times{
+		padding-top: 30px;
 	}
 }
 @media screen and (min-width: 765px){
