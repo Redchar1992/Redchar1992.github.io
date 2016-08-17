@@ -61,6 +61,58 @@ input{
 .tree img{
 	width: 80%;
 }
+.tree{animation: treeS 1s linear infinite;}
+.tree{-webkit-animation: treeS 1s linear infinite;}
+.tree{-o-animation: treeS 1s linear infinite;}
+.tree{-moz-animation: treeS 1s linear infinite;}
+.tree{-ms-animation: treeS 1s linear infinite;}
+@keyframes treeS{
+	0%{transform: rotate(0deg);}
+	12.5%{transform: rotate(-1deg);}
+	37.5%{transform: rotate(1deg);}
+	62.5%{transform: rotate(-1deg);}
+	87.5%{transform: rotate(1deg);}
+	100%{transform: rotate(0deg);}
+}
+@-webkit-keyframes treeS{
+	0%{transform: rotate(0deg);}
+	12.5%{transform: rotate(-1deg);}
+	37.5%{transform: rotate(1deg);}
+	62.5%{transform: rotate(-1deg);}
+	87.5%{transform: rotate(1deg);}
+	100%{transform: rotate(0deg);}
+}
+@-moz-keyframes treeS{
+	0%{transform: rotate(0deg);}
+	12.5%{transform: rotate(-1deg);}
+	37.5%{transform: rotate(1deg);}
+	62.5%{transform: rotate(-1deg);}
+	87.5%{transform: rotate(1deg);}
+	100%{transform: rotate(0deg);}
+}
+@-o-keyframes treeS{
+	0%{transform: rotate(0deg);}
+	12.5%{transform: rotate(-1deg);}
+	37.5%{transform: rotate(1deg);}
+	62.5%{transform: rotate(-1deg);}
+	87.5%{transform: rotate(1deg);}
+	100%{transform: rotate(0deg);}
+}
+@-ms-keyframes treeS{
+	0%{transform: rotate(0deg);}
+	12.5%{transform: rotate(-1deg);}
+	37.5%{transform: rotate(1deg);}
+	62.5%{transform: rotate(-1deg);}
+	87.5%{transform: rotate(1deg);}
+	100%{transform: rotate(0deg);}
+}
+.tree2{
+	text-align: center;
+	margin-top: -87%;
+}
+.tree2 img{
+	width: 80%;
+}
 .shake{
 	position: absolute;
 	right: 3%;
@@ -93,6 +145,7 @@ input{
 	right: 2%;
 	width: 35%;
 	bottom: 0%;
+	z-index: 2;
 }
 .boy .person{
 	width: 100%;
@@ -113,42 +166,42 @@ input{
 .hand{-ms-animation: danM 2.5s linear infinite;}
 @keyframes danM{
 	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
-	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
-	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
 	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
 }
 @-webkit-keyframes danM{
 	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
-	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
-	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
 	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
 }
 @-o-keyframes danM{
 	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
-	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
-	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
 	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
 }
 @-moz-keyframes danM{
 	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
-	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
-	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
 	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
 }
 @-ms-keyframes danM{
 	0%{transform: rotate(0deg);transform-origin: 100% 100%;}
-	12.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	37.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
-	62.5%{transform: rotate(-11deg);transform-origin: 100% 100%;}
-	87.5%{transform: rotate(9deg);transform-origin: 100% 100%;}
+	12.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	37.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
+	62.5%{transform: rotate(-6deg);transform-origin: 100% 100%;}
+	87.5%{transform: rotate(5deg);transform-origin: 100% 100%;}
 	100%{transform: rotate(0deg);transform-origin: 100% 100%;}
 }
 /*index-b*/
@@ -491,6 +544,8 @@ input{
 	}
 	.times{
 		padding-top: 18px;
+		bottom: 2%;
+		height: 14%;
 	}
 }
 @media screen and (width: 360px){
