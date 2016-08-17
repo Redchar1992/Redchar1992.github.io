@@ -77,7 +77,7 @@ input{
 }
 .regPackets .packetsMoney{
 	margin-top: 15px;
-	background: url(../images/logo.png) top no-repeat;
+	background: url(https://redchar1992.github.io/img/816/logo.png) top no-repeat;
 	background-size: 75px 75px;
 	padding-top: 85px;
 	text-align: center;
@@ -185,7 +185,7 @@ input{
 /*我的收入*/
 .myIncome{
 	margin: 30px 0;
-	background: url(../images/head.jpg) top no-repeat;
+	background: url(https://redchar1992.github.io/img/816/head.jpg) top no-repeat;
 	background-size: 90px 90px;
 	padding-top: 100px;
 	text-align: center;
@@ -258,7 +258,7 @@ input{
 	font-size: 16px;
 }
 .wdCash .count{
-	background: url(../images/money.jpg) left no-repeat;
+	background: url(https://redchar1992.github.io/img/816/money.jpg) left no-repeat;
 	background-size: 20px;
 	height: 40px;
 	line-height: 40px;
@@ -338,7 +338,7 @@ input{
 	padding: 15px;
 }
 .equipment .user{
-	background: url(../images/head.png) left no-repeat;
+	background: url(https://redchar1992.github.io/img/816/head.png) left no-repeat;
 	background-size: 65px 65px;
 	height: 65px;
 	margin-bottom: 15px;
@@ -364,7 +364,7 @@ input{
 	border-radius: 5px;
 }
 .equipment .eqBtn .search{
-	background: #E95412 url(../images/search.png) 38px 12px no-repeat;
+	background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 38px 12px no-repeat;
 	background-size: 13px 13px;
 }
 .equipment .eqBtn .add{
@@ -376,7 +376,7 @@ input{
 	position: absolute;
 	height: 10%;
 	top: 60%;
-	background: url(../images/nomore.png) top no-repeat;
+	background: url(https://redchar1992.github.io/img/816/nomore.png) top no-repeat;
 	background-size: 85px 85px;
 	padding-top: 100px;
 	color: #AFAFAF;
@@ -384,25 +384,25 @@ input{
 }
 @media screen and (max-width: 321px){
 	.equipment .eqBtn .search{
-		background: #E95412 url(../images/search.png) 26px 12px no-repeat;
+		background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 26px 12px no-repeat;
 		background-size: 13px 13px;
 	}
 }
 @media screen and (width: 360px){
 	.equipment .eqBtn .search{
-		background: #E95412 url(../images/search.png) 34px 12px no-repeat;
+		background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 34px 12px no-repeat;
 		background-size: 13px 13px;
 	}
 }
 @media screen and (min-width: 410px){
 	.equipment .eqBtn .search{
-		background: #E95412 url(../images/search.png) 47px 12px no-repeat;
+		background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 47px 12px no-repeat;
 		background-size: 13px 13px;
 	}
 }
 @media screen and (min-width: 765px){
 	.equipment .eqBtn .search{
-		background: #E95412 url(../images/search.png) 132px 12px no-repeat;
+		background: #E95412 url(https://redchar1992.github.io/img/816/search.png) 132px 12px no-repeat;
 		background-size: 13px 13px;
 	}
 }
