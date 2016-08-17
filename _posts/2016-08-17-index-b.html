@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+	    <meta name="HandheldFriendly" content="True">
+	    <meta name="MobileOptimized" content="320">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="cleartype" content="on">
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta content="telephone=no" name="format-detection" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>全民摇钱树</title>
+		<link rel="stylesheet" href="https://redchar1992.github.io/css/816/common.css" />
+	</head>
+	<body>
+		<div class="regPackets">
+			<div class="close clearfix">
+				<a href="index-a.html" class="fr">关闭</a>
+			</div>
+			<div class="advertisement">
+				<a href="#"><img src="images/ad.png" alt=""></a>
+			</div>
+			<div class="packetsMoney">
+				<div class="packetsSource"><span>唯品会</span>的红包</div>
+				<div class="money"><span>0.04</span>元</div>
+			</div>
+			<div class="cashRightNow">
+				<a href="withdrawCash.html">立即提现</a>
+			</div>
+		</div>
+		<div class="again">
+			<input type="button" value="再摇一次">
+		</div>
+	</body>
+	<script src="https://redchar1992.github.io/js/jquery-1.11.3.min.js"></script>
+	<script>
+		(function(){
+			function bdcss(){
+				var h = document.documentElement.clientHeight || document.body.clientHeight;
+				$("body").css({
+					"position":"absolute",
+					"top":0,
+					"left":0,
+					"width":"100%",
+					"height":h,
+					"background":"#76E4FF url(images/bg1.png) 0 70px no-repeat",
+					"background-size":"100%"
+				})
+			}
+			$(window).on('load resize',function(){
+				bdcss();
+			});
+		}())
+	</script>
+</html>

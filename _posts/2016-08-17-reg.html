@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+	    <meta name="HandheldFriendly" content="True">
+	    <meta name="MobileOptimized" content="320">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="cleartype" content="on">
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta content="telephone=no" name="format-detection" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>摇钱妹全国代理商招募</title>
+		<link rel="stylesheet" href="https://redchar1992.github.io/css/816/common.css" />
+	</head>
+	<body style="background:#ddd;">
+		<div class="ad">ad</div>
+		<div class="regMain">
+			<h2 class="regTitle">摇钱妹全国代理商招募</h2>
+			<p class="p10">有意向成为全国代理商的合作伙伴，可填写此表单，相关商务人员将在三个工作日内与贵公司联系</p>
+			<form action="">
+				<ul>
+					<li class="gray">省市区 <span>*</span></li>
+					<li class="fill" id="city">
+						<select class="prov"></select>
+	                    <select class="city" disabled="disabled"></select>
+	                    <select class="dist" disabled="disabled"></select>
+					</li>
+					<li class="gray">公司名称 <span>*</span></li>
+					<li class="fill"><input type="text" name="" id=""></li>
+					<li class="gray">联系人 <span>*</span></li>
+					<li class="fill"><input type="text" name="" id=""></li>
+					<li class="gray">手机 <span>*</span></li>
+					<li class="fill"><input type="tel" name="" id="" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" autocomplete="off"></li>
+					<li class="gray">QQ号或微信号 <span>*</span></li>
+					<li class="fill"><input type="text" name="" id=""></li>
+					<li class="gray">已购设备数量 <span>*</span></li>
+					<li class="fill"><input type="number" name="" id=""></li>
+					<li class="gray">您拥有的市场资源（请列举） <span>*</span></li>
+					<li class="fill"><input type="text" name="" id=""></li>
+					<li class="gray">企业规模 <span>*</span></li>
+					<li class="fill" id="size">
+						<select class="prov"></select>
+					</li>
+				</ul>
+				<div class="submit"><input type="submit" value="立即提交"></div>
+			</form>
+		</div>
+		<div class="regFoot">
+			***平台提供技术支持
+		</div>
+		<script type="text/javascript" src="https://redchar1992.github.io/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://redchar1992.github.io/city/js/jquery.cityselect.js"></script>
+		<script>
+			$(function(){
+				$("#city").citySelect({
+                    prov: "北京",
+                    nodata: "none",
+                    required: false
+                });
+                $("#size").citySelect({
+                    url: {"citylist": [
+                            {"p": "500人以上"},
+                            {"p": "100-500人"},
+                            {"p": "50-100人"},
+                            {"p": "20-50人"},
+                            {"p": "20人以下"}
+                        ]},
+                    nodata: "none",
+                    required: false
+                });
+			})
+		</script>
+	</body>
+</html>
