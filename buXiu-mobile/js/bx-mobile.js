@@ -2,9 +2,20 @@ $(document).ready(function () {
 	var mySwiper = new Swiper ('.swiper-container', {
 	    direction: 'vertical',
 	    loop: true,
-	    pagination: '.swiper-pagination'
+	    pagination: '.swiper-pagination',
+	    onSlideChangeEnd: function(swiper){
+      		switch(swiper.activeIndex){
+      			case 8:
+      			var marginTop = verticalAuto($(".slide8"));
+  				console.log(marginTop);
+  				break;
+  				default:
+  				console.log(swiper.activeIndex);
+  				break;
+      		}
+    	}
   	})
-  	mySwiper.slideTo(9);
+  	// mySwiper.slideTo(9);
 
 
   	var h = document.documentElement.clientHeight;
@@ -20,8 +31,7 @@ $(document).ready(function () {
   		obj.find("img").eq(0).css("margin-top",marginTop+"px");
   		return marginTop;
   	}
-  	var marginTop = verticalAuto($(".slide8"));
-  	console.log(marginTop);
+  	
   	// var 
 })
 		  	
