@@ -1,0 +1,237 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #2e2f3d;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #2e2f3d url(../images/arrow-u.png) bottom no-repeat;
+	background-size: 8%;
+    /* Center slide text vertically */
+/*    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;*/
+}
+.swiper-pagination-bullet-active{
+	background: #A7A3A4;
+}
+.slide img{display: block;}
+.slide1{
+	background: url(../images/banner-m.jpg) center no-repeat;
+	background-size: 100%;
+}
+.slide2 .mL{
+	width: 80%;
+	height: 50%;
+	background: url(../images/me-2-1.jpg) bottom no-repeat;
+	background-size: 100%;
+	margin-left: 10%;
+}
+.slide2 .mR{
+	width: 80%;
+	height: 40%;
+	background: url(../images/me-2-2.jpg) top no-repeat;
+	background-size: 100%;
+	margin-left: 10%;
+	margin-top: 8%;
+}
+.slide3 .mL{
+	width: 90%;
+	height: 50%;
+	background: url(../images/me-3-1.jpg) bottom no-repeat;
+	background-size: 100%;
+	margin-left: 5%;
+}
+.slide3 .mR{
+	width: 90%;
+	height: 40%;
+	background: url(../images/me-3-2.jpg) top no-repeat;
+	background-size: 100%;
+	margin-left: 5%;
+	margin-top: 8%;
+}
+.slide4 img{
+	width: 100%;
+	display: block;
+}
+.slide4 .slide-4-1{
+	margin-top: 33%;
+}
+.slide4 .slide-4-2{
+	margin-top: 7%;
+}
+.slide4 .slide-4-3{
+	margin-top: 7%;
+}
+/*.slide5{
+	height: 100%;
+	margin: auto 0;
+	line-height: 1140px;
+}*/
+.slide5 img{
+	width: 94%;
+	display: block;
+	margin-left: 3%;
+}
+.slide5 .slide-5-1{
+	margin-top: 33%;
+}
+.slide5 .slide-5-2{
+	margin-top: 7%;
+}
+.slide5 .slide-5-3{
+	margin-top: 7%;
+}
+.slide6 .slide-6-1{
+	width: 80%;
+	margin-top: 15%;
+}
+.slide6 .slide-6-2{
+	margin-top: 7%;
+	width: 60%;
+	margin-left: 3%;
+}
+.slide6 .slide-6-3{
+	margin-top: -7%;
+	width: 60%;
+	margin-right: 3%;
+}
+.slide7 .slide-7-1{
+	margin-top: 15%;
+	width: 60%;
+	margin-left: 3%;
+}
+.slide7 .slide-7-2{
+	margin-top: -7%;
+	width: 60%;
+	margin-right: 3%;
+}
+.slide7 .slide-7-3{
+	margin-top: -7%;
+	width: 60%;
+	margin-left: 3%;
+}
+.slide8 .slide-8-1{
+	margin-top: 15%;
+	width: 86%;
+}
+.slide8 .slide-8-2{
+	padding-top: 7%;
+	width: 90%;
+}
+
+
+/* 留言资讯 */
+.slide9 .askFormBox .name{
+	font-size: 0;
+}
+.slide9 .askFormBox h1{
+	color: #fff;
+	font-family: 'Microsoft yahei';
+	text-align: left;
+	font-size: 1.8rem;
+	margin-left: 3%;
+	margin-top: 10%;
+}
+.slide9 .askFormBox .name{
+	font-size: 0;
+	margin-top: 5%;
+}
+.slide9 .askFormBox .name input{
+	font-size: 1.2rem;
+	padding: 5px;
+	text-align: left;
+	font-family: 'Microsoft yahei';
+}
+.slide9 .askFormBox .name input.nm{
+	width: 26%;
+}
+.slide9 .askFormBox .name input.ct{
+	width: 57%;
+	margin-left: 3%;
+}
+.slide9 .askFormBox .msg{
+	margin-top: 3%;
+}
+.slide9 .askFormBox .msg textarea{
+	width: 90%;
+    /*height: 40%;*/
+    padding: 5px;
+    resize: none;
+    border: 1px solid #bcc1cd;
+    background: #fff;
+    font-size: 1.2rem;
+    font-family: 'Microsoft yahei';
+}
+.slide9 .askFormBox .submit{
+	margin-top: 4%;
+	text-align: left;
+	margin-left: 4%;
+}
+.slide9 .askFormBox .submit input{
+	/*width: 179px;*/
+	/*height: 55px;*/
+	width: 35%;
+	color: #fff;
+	font-size: 1.2rem;
+	/*background: url(../images/ask-btn.png) no-repeat;*/
+	/*text-align: center;*/
+	/*line-height: 53px;*/
+	/*font-family: 'Microsoft yahei';*/
+}
+.slide9 .service-way div{
+	text-align: left;
+}
+.slide9 .service-way p{
+	color: #fff;
+	font-size: 1.4rem;
+	text-align: left;
+	font-family: 'Microsoft yahei';
+}
+.slide9 .service-way .blue-num{
+	color: #0074ff;
+	font-weight: bold;
+	font-size: 2.8rem;
+	font-family: 'Microsoft yahei';
+}
+.slide9 .service-way .qq{
+	margin: 7%;
+	border-top: 1px solid #435166;
+	padding-top: 7%;
+}
+.slide9 .service-way .hotLine{
+	margin: 7%;
+}
+.slide9 .service-way .hotLine p{
+	background: url(../images/hotline.png) left no-repeat;
+	background-size: 7%;
+	padding-left: 8%;
+}
+.slide9 .service-way .qq p{
+	background: url(../images/qq.png) left no-repeat;
+	background-size: 7%;
+	padding-left: 8%;
+}
