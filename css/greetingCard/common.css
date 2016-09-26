@@ -1,0 +1,25 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+input{ font-size:12px;}
+a{ text-decoration:none; color:#000;}
+a:hover{color:#c00; text-decoration:none;}
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+.clear{clear:both;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after {content: ".";display: block;height: 0pt;clear: both;visibility: hidden;}
+.clearfix {display: block;}
+img{border: none !important;-webkit-border:none;}
+.css{-webkit-touch-callout: none};
+.tips{color: #783a3a;text-align: center;font-size: 14px;}
+input[type=button], input[type=submit], input[type=file], input[type=tel], button { cursor: pointer; -webkit-appearance: none; outline: none;border: none;}
+input::-ms-input-placeholder{text-align: center;}
+input::-webkit-input-placeholder{text-align: center;}
+input::input-placeholder { text-align: center ;}
+input[placeholder], [placeholder], *[placeholder] { }
+input:disabled{color:#000 !important;}
+.ab{position: absolute;}

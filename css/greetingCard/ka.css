@@ -1,0 +1,46 @@
+body{
+	font-family:"Microsoft YaHei";overflow-x: hidden;position: relative;background: #ff4350;
+	max-width: 421px;resize: both;min-width: 320px;overflow: auto;margin: 0 auto;
+}
+.mini_bd{
+	width: 65%;border-radius: 5px;background: #000;opacity: 0.85;color: #fff;text-align: center;padding: 15px 0;
+	position: fixed;
+	z-index:7;
+	top: 30%;left: 50%;
+	-moz-transform: translate(-50%, -50%) !important;
+	-ms-transform: translate(-50%, -50%) !important;
+	-webkit-transform: translate(-50%, -50%) !important;
+	transform: translate(-50%, -50%) !important;
+	display: none;
+}
+/*主题选择页*/
+.kaDan{border-right: 1px solid #000;}
+.choose{border-bottom: 1px solid #000;font-size: 0;}
+.choose .ka{height: 195px;}
+.choose3 .ka{height: 190px;}
+.ka{position: relative;display: inline-block;width: 49.8%;text-align: center;}
+.ka .kaPian{width: 80%;}
+.ka .ab{
+	display: inline-block;width: 100%;bottom: 0px;left: 0;height: 58px;color: #fff;font-size: 18px;
+	background: url(../images/kaBtm.png) no-repeat;background-size: 100%;line-height: 80px;
+}
+.ka a{display: inline-block;height: 195px;width: 100%;}
+
+@media screen and (max-width: 320px){
+	.choose .ka{height: 170px;}
+	.choose3 .ka{height: 165px;}
+	.ka .ab{height: 49px;line-height: 70px;font-size: 16px;}
+}
+@media screen and (width: 360px){
+	.choose .ka{height: 190px;}
+	.choose3 .ka{height: 185px;}
+	.ka .ab{height: 55px;line-height: 76px;}
+}
+@media screen and (min-width: 412px){
+	.choose .ka{height: 215px;}
+	.choose3 .ka{height: 205px;}
+	.ka .ab{line-height: 89px;height: 63px;}
+}
+@media screen and (min-width: 421px){
+	
+}
