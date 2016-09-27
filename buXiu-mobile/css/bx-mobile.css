@@ -39,7 +39,9 @@ body {
 	background: #A7A3A4;
 }
 .slide img{display: block;}
-.slide1{
+.slide1 .all{
+	width: 100%;
+	height: 100%;
 	background: url(../images/banner-m.jpg) center no-repeat;
 	background-size: 100%;
 }
@@ -269,7 +271,7 @@ body {
 	50%{opacity:0.5;transform:translateX(-30px)}
 	100%{opacity:1;transform:translateX(0)}
 }
-.slide2.animation .mL,.slide3.animation .mL,.slide1.animation{
+.slide2.animation .mL,.slide3.animation .mL,.slide1.animation .all{
 	animation:fadeInLeft 0.7s 0s ease both;
 	-webkit-animation:fadeInLeft 0.7s 0s ease both;
 	-moz-animation:fadeInLeft 0.7s 0s ease both;
