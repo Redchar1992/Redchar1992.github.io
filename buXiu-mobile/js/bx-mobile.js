@@ -34,7 +34,7 @@ $(document).ready(function () {
   	function verticalAuto(obj,num){
   		var count = 0;
         var h = document.documentElement.clientHeight;
-        if(num == 4 || num == 5){
+        if(num > 3 && num < 6){
         	h *= 0.86;
         }
         else if(num == 7){
