@@ -244,10 +244,10 @@ body {
 
 /* animate */
 .slide2.animation .mR,.slide3.animation .mR{
-	animation:fadeInRight 1s .2s ease both;
-	-webkit-animation:fadeInRight 1s .2s ease both;
-	-moz-animation:fadeInRight 1s .2s ease both;
-	-o-animation:fadeInRight 1s .2s ease both;
+	animation:fadeInRight 0.7s 0s ease both;
+	-webkit-animation:fadeInRight 0.7s 0s ease both;
+	-moz-animation:fadeInRight 0.7s 0s ease both;
+	-o-animation:fadeInRight 0.7s 0s ease both;
 }
 @keyframes fadeInRight{
 	0%{opacity:0;transform:translateX(360px)}
@@ -270,10 +270,10 @@ body {
 	100%{opacity:1;transform:translateX(0)}
 }
 .slide2.animation .mL,.slide3.animation .mL,.slide1.animation{
-	animation:fadeInLeft 1s .2s ease both;
-	-webkit-animation:fadeInLeft 1s .2s ease both;
-	-moz-animation:fadeInLeft 1s .2s ease both;
-	-o-animation:fadeInLeft 1s .2s ease both;
+	animation:fadeInLeft 0.7s 0s ease both;
+	-webkit-animation:fadeInLeft 0.7s 0s ease both;
+	-moz-animation:fadeInLeft 0.7s 0s ease both;
+	-o-animation:fadeInLeft 0.7s 0s ease both;
 }
 @keyframes fadeInLeft{
 	0%{opacity:0;transform:translateX(-360px)}
@@ -291,6 +291,60 @@ body {
 	100%{opacity:1;transform:translateX(0)}
 }
 @-o-keyframes fadeInLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+
+
+.m567-right{
+	animation:moveRight 0.6s .7s ease both;
+	-webkit-animation:moveRight 0.6s .7s ease both;
+	-moz-animation:moveRight 0.6s .7s ease both;
+	-o-animation:moveRight 0.6s .7s ease both;
+}
+@keyframes moveRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes moveRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-moz-keyframes moveRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-o-keyframes moveRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+.m567-left{
+	animation:moveLeft 0.6s .3s ease both;
+	-webkit-animation:moveLeft 0.6s .3s ease both;
+	-moz-animation:moveLeft 0.6s .3s ease both;
+	-o-animation:moveLeft 0.6s .3s ease both;
+}
+@keyframes moveLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes moveLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-moz-keyframes moveLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-o-keyframes moveLeft{
 	0%{opacity:0;transform:translateX(-360px)}
 	50%{opacity:0.5;transform:translateX(30px)}
 	100%{opacity:1;transform:translateX(0)}
