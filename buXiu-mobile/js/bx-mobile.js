@@ -7,7 +7,7 @@ $(document).ready(function () {
 	    	var key = swiper.activeIndex;
 	    	// console.log(key);
 	    	if(key <= 4 || key == 10){
-	    		$('.slide'+key%9).addClass("animation").css("visibility","visible");	    		
+	    		$('.slide'+key%9).addClass("animation").css("visibility","visible");
 	    		// $('.slide'+key-1).removeClass("animation").css("visibility","hidden");
 	    		remv(key+1);
 	    		remv(key-1);
@@ -15,7 +15,6 @@ $(document).ready(function () {
 	    	}
 	    	if(key > 3 && key <= 8){
 	    		verticalAuto($('.slide'+key),key);
-	    		
 	    	}
 	    	if(key > 2 && key <= 9){
 	    		re(key+1);
@@ -75,4 +74,12 @@ $(document).ready(function () {
   			$(".slide"+key+" img").eq(2).removeClass("m567-right").css("visibility","hidden");
   		}
   	}
+
+    //留言咨询
+  	$(".submit input").on('click',function(){
+        $(".board,.popUp").show();
+  	})
+    $(".close").on('click',function(){
+        $(".board,.popUp").hide();
+    })
 })
