@@ -36,11 +36,11 @@ $(document).ready(function () {
   	function verticalAuto(obj,num){
   		var count = 0;
         var h = document.documentElement.clientHeight;
-        if(num == 7){
-            h *= 1.14;
-        }
-        if(num == 5 || num == 4){
+        if(num == 4 || num == 5){
         	h *= 0.86;
+        }
+        else if(num == 7){
+            h *= 1.14;
         }
   		for(var i=0;i<obj.get(0).children.length;i++){
   			count = obj.find("img").eq(i).get(0).offsetHeight + count;

@@ -153,12 +153,13 @@ body {
 	font-family: 'Microsoft yahei';
 	text-align: left;
 	font-size: 1.8rem;
-	margin-left: 3%;
-	margin-top: 10%;
+	margin: 5% 0 0 3%;
 }
 .slide9 .askFormBox .name{
 	font-size: 0;
 	margin-top: 5%;
+	text-align: left;
+	margin-left: 4%;
 }
 .slide9 .askFormBox .name input{
 	font-size: 1.2rem;
@@ -175,6 +176,8 @@ body {
 }
 .slide9 .askFormBox .msg{
 	margin-top: 3%;
+	text-align: left;
+	margin-left: 4%;
 }
 .slide9 .askFormBox .msg textarea{
 	width: 90%;
@@ -235,9 +238,19 @@ body {
 	background-size: 7%;
 	padding-left: 8%;
 }
-
+@media screen and (min-width: 321px){
+	.slide9 .service-way .blue-num{
+		font-size: 2rem;
+	}
+	.slide9 .service-way p{
+		font-size: 1.3rem;
+	}
+}
 @media screen and (min-width: 560px){
 	.slide9 .service-way p{
 		padding: 20px 0;
+	}
+	.slide9 .askFormBox h1{
+		margin-top: 10%;
 	}
 }
