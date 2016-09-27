@@ -77,6 +77,9 @@ body {
 	width: 100%;
 	display: block;
 }
+.slide4{
+	opacity: 0;
+}
 .slide4 .slide-4-1{
 	/*margin-top: 33%;*/
 }
@@ -238,12 +241,77 @@ body {
 	background-size: 7%;
 	padding-left: 8%;
 }
-@media screen and (max-width: 321px){
+
+/* animate */
+.slide2.animation .mR,.slide3.animation .mR{
+	animation:fadeInRight 1s .2s ease both;
+	-webkit-animation:fadeInRight 1s .2s ease both;
+	-moz-animation:fadeInRight 1s .2s ease both;
+	-o-animation:fadeInRight 1s .2s ease both;
+}
+@keyframes fadeInRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes fadeInRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-moz-keyframes fadeInRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-o-keyframes fadeInRight{
+	0%{opacity:0;transform:translateX(360px)}
+	50%{opacity:0.5;transform:translateX(-30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+.slide2.animation .mL,.slide3.animation .mL,.slide1.animation{
+	animation:fadeInLeft 1s .2s ease both;
+	-webkit-animation:fadeInLeft 1s .2s ease both;
+	-moz-animation:fadeInLeft 1s .2s ease both;
+	-o-animation:fadeInLeft 1s .2s ease both;
+}
+@keyframes fadeInLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes fadeInLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-moz-keyframes fadeInLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+@-o-keyframes fadeInLeft{
+	0%{opacity:0;transform:translateX(-360px)}
+	50%{opacity:0.5;transform:translateX(30px)}
+	100%{opacity:1;transform:translateX(0)}
+}
+
+@media screen and (max-width: 351px){
 	.slide9 .service-way .blue-num{
 		font-size: 2rem;
 	}
 	.slide9 .service-way p{
 		font-size: 1.3rem;
+	}
+	.slide9 .askFormBox h1{
+		font-size: 1.5rem;
+		margin: 4% 0 0 4%;
+	}
+	.slide9 .service-way .hotLine,.slide9 .service-way .qq{
+		margin: 3% 4% 0;
+	}
+	.slide9 .service-way .qq{
+		padding-top: 3%;
 	}
 }
 @media screen and (min-width: 560px){

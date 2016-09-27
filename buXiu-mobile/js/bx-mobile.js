@@ -4,35 +4,34 @@ $(document).ready(function () {
 	    loop: true,
 	    pagination: '.swiper-pagination',
 	    onSlideChangeEnd: function(swiper){
-      		switch(swiper.activeIndex){
-      			case 4:
-                    verticalAuto($(".slide4"),4);
-                    break;
-      			case 5:
-                    verticalAuto($(".slide5"),5);
-                    break;
-                case 6:
-                    verticalAuto($(".slide6"));
-                    break;
-                case 7:
-                    verticalAuto($(".slide7"),7);
-                    break;
-      			case 8:
-      			    verticalAuto($(".slide8"));
-  				    break;
-  				default:
-  				    console.log(swiper.activeIndex);
-  				    break;
-      		}
+	    	var key = swiper.activeIndex;
+	    	// console.log(key);
+	    	if(key <= 4 || key == 10){
+	    		$('.slide'+key%9).addClass("animation").css("visibility","visible")	    		
+	    		// $('.slide'+key-1).removeClass("animation").css("visibility","hidden");
+	    		remv(key+1);
+	    		remv(key-1);
+	    		// console.log("v"+key);
+	    	}
+	    	if(key > 3 && key <= 8){
+	    		verticalAuto($('.slide'+key),key);
+	    		
+	    	}
+	    	if(key > 2 && key <= 9){
+	    		re(key+1);
+	    		re(key-1);
+	    	}
     	}
   	})
   	// mySwiper.slideTo(9);
 
+  	function remv(key){
+  		if(key < 4 && key > 0){
+  			$('.slide'+key).removeClass("animation").css("visibility","hidden");
+  			// console.log("re"+key);
+  		}
+  	}
 
-  	// var h = document.documentElement.clientHeight;
-
-  	// console.log($(".slide-8-1").get(0).offsetHeight);
-  	// console.log($(".slide-8-2").get(0).offsetHeight);
   	function verticalAuto(obj,num){
   		var count = 0;
         var h = document.documentElement.clientHeight;
@@ -46,8 +45,14 @@ $(document).ready(function () {
   			count = obj.find("img").eq(i).get(0).offsetHeight + count;
   		}
   		var marginTop = (h * 0.95 - count)/2;
-  		obj.find("img").eq(0).css("margin-top",marginTop+"px");
+  		obj.find("img").eq(0).animate({"margin-top":marginTop+50+"px"},300).animate({"margin-top":marginTop+"px"},300);
+  		obj.animate({"opacity":1});
   		return marginTop;
   	}
-
+  	function re(key){
+  		if(key >3 && key <=8){
+	  		$(".slide"+key).css("opacity",0);
+	  		$(".slide"+key).find("img").eq(0).css("margin-top",0);
+	  	}
+  	}
 })
