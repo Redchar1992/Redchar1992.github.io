@@ -153,7 +153,7 @@ body {
 	font-family: 'Microsoft yahei';
 	text-align: left;
 	font-size: 1.8rem;
-	margin: 5% 0 0 3%;
+	margin: 5% 0 0 4%;
 }
 .slide9 .askFormBox .name{
 	font-size: 0;
@@ -238,7 +238,7 @@ body {
 	background-size: 7%;
 	padding-left: 8%;
 }
-@media screen and (min-width: 321px){
+@media screen and (max-width: 321px){
 	.slide9 .service-way .blue-num{
 		font-size: 2rem;
 	}
