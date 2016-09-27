@@ -5,33 +5,49 @@ $(document).ready(function () {
 	    pagination: '.swiper-pagination',
 	    onSlideChangeEnd: function(swiper){
       		switch(swiper.activeIndex){
+      			case 4:
+                    verticalAuto($(".slide4"),4);
+                    break;
+      			case 5:
+                    verticalAuto($(".slide5"),5);
+                    break;
+                case 6:
+                    verticalAuto($(".slide6"));
+                    break;
+                case 7:
+                    verticalAuto($(".slide7"),7);
+                    break;
       			case 8:
-      			var marginTop = verticalAuto($(".slide8"));
-  				console.log(marginTop);
-  				break;
+      			    verticalAuto($(".slide8"));
+  				    break;
   				default:
-  				console.log(swiper.activeIndex);
-  				break;
+  				    console.log(swiper.activeIndex);
+  				    break;
       		}
     	}
   	})
   	// mySwiper.slideTo(9);
 
 
-  	var h = document.documentElement.clientHeight;
+  	// var h = document.documentElement.clientHeight;
 
-  	console.log($(".slide-8-1").get(0).offsetHeight);
-  	console.log($(".slide-8-2").get(0).offsetHeight);
-  	function verticalAuto(obj){
+  	// console.log($(".slide-8-1").get(0).offsetHeight);
+  	// console.log($(".slide-8-2").get(0).offsetHeight);
+  	function verticalAuto(obj,num){
   		var count = 0;
+        var h = document.documentElement.clientHeight;
+        if(num == 7){
+            h *= 1.14;
+        }
+        if(num == 5 || num == 4){
+        	h *= 0.86;
+        }
   		for(var i=0;i<obj.get(0).children.length;i++){
   			count = obj.find("img").eq(i).get(0).offsetHeight + count;
   		}
-  		var marginTop = (h-count)/2;
+  		var marginTop = (h * 0.95 - count)/2;
   		obj.find("img").eq(0).css("margin-top",marginTop+"px");
   		return marginTop;
   	}
-  	
-  	// var 
+
 })
-		  	

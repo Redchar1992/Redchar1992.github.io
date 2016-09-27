@@ -44,18 +44,18 @@ body {
 	background-size: 100%;
 }
 .slide2 .mL{
-	width: 80%;
+	width: 70%;
 	height: 50%;
 	background: url(../images/me-2-1.jpg) bottom no-repeat;
 	background-size: 100%;
-	margin-left: 10%;
+	margin-left: 15%;
 }
 .slide2 .mR{
-	width: 80%;
+	width: 70%;
 	height: 40%;
 	background: url(../images/me-2-2.jpg) top no-repeat;
 	background-size: 100%;
-	margin-left: 10%;
+	margin-left: 15%;
 	margin-top: 8%;
 }
 .slide3 .mL{
@@ -78,7 +78,7 @@ body {
 	display: block;
 }
 .slide4 .slide-4-1{
-	margin-top: 33%;
+	/*margin-top: 33%;*/
 }
 .slide4 .slide-4-2{
 	margin-top: 7%;
@@ -97,7 +97,7 @@ body {
 	margin-left: 3%;
 }
 .slide5 .slide-5-1{
-	margin-top: 33%;
+	/*margin-top: 33%;*/
 }
 .slide5 .slide-5-2{
 	margin-top: 7%;
@@ -106,36 +106,36 @@ body {
 	margin-top: 7%;
 }
 .slide6 .slide-6-1{
-	width: 80%;
-	margin-top: 15%;
+	width: 70%;
+	/*margin-top: 15%;*/
 }
 .slide6 .slide-6-2{
 	margin-top: 7%;
-	width: 60%;
+	width: 50%;
 	margin-left: 3%;
 }
 .slide6 .slide-6-3{
 	margin-top: -7%;
-	width: 60%;
+	width: 50%;
 	margin-right: 3%;
 }
+.slide7 img{
+	width: 50%;
+}
 .slide7 .slide-7-1{
-	margin-top: 15%;
-	width: 60%;
+	/*margin-top: 15%;*/
 	margin-left: 3%;
 }
 .slide7 .slide-7-2{
 	margin-top: -7%;
-	width: 60%;
 	margin-right: 3%;
 }
 .slide7 .slide-7-3{
 	margin-top: -7%;
-	width: 60%;
 	margin-left: 3%;
 }
 .slide8 .slide-8-1{
-	margin-top: 15%;
+	/*margin-top: 15%;*/
 	width: 86%;
 }
 .slide8 .slide-8-2{
@@ -218,12 +218,12 @@ body {
 	font-family: 'Microsoft yahei';
 }
 .slide9 .service-way .qq{
-	margin: 7%;
+	margin: 4%;
 	border-top: 1px solid #435166;
-	padding-top: 7%;
+	padding-top: 4%;
 }
 .slide9 .service-way .hotLine{
-	margin: 7%;
+	margin: 4% 4% 3%;
 }
 .slide9 .service-way .hotLine p{
 	background: url(../images/hotline.png) left no-repeat;
@@ -234,4 +234,10 @@ body {
 	background: url(../images/qq.png) left no-repeat;
 	background-size: 7%;
 	padding-left: 8%;
+}
+
+@media screen and (min-width: 560px){
+	.slide9 .service-way p{
+		padding: 20px 0;
+	}
 }
