@@ -82,4 +82,16 @@ $(document).ready(function () {
     $(".close").on('click',function(){
         $(".board,.popUp").hide();
     })
+
+    $(window).on("load resize",function(){
+    	console.log("resize or load");
+    	var h = document.documentElement.clientHeight;
+    	var w = document.documentElement.clientWidth;
+    	if(h/w<1.32){
+    		$(".judge").css({"height":h,"line-height":h+"px"}).show();
+    	}
+    	else{
+    		$(".judge").hide();
+    	}
+    })
 })
