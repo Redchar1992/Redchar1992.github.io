@@ -5,13 +5,10 @@ $(document).ready(function () {
 	    pagination: '.swiper-pagination',
 	    onSlideChangeEnd: function(swiper){
 	    	var key = swiper.activeIndex;
-	    	// console.log(key);
 	    	if(key <= 4 || key == 10){
 	    		$('.slide'+key%9).addClass("animation").css("visibility","visible");
-	    		// $('.slide'+key-1).removeClass("animation").css("visibility","hidden");
 	    		remv(key+1);
 	    		remv(key-1);
-	    		// console.log("v"+key);
 	    	}
 	    	if(key > 3 && key <= 8){
 	    		verticalAuto($('.slide'+key),key);
@@ -27,7 +24,6 @@ $(document).ready(function () {
   	function remv(key){
   		if(key < 4 && key > 0){
   			$('.slide'+key).removeClass("animation").css("visibility","hidden");
-  			// console.log("re"+key);
   		}
   	}
 
@@ -44,22 +40,23 @@ $(document).ready(function () {
   			count = obj.find("img").eq(i).get(0).offsetHeight + count;
   		}
   		var marginTop = (h * 0.95 - count)/2;
-  		if(num == 4 || num == 8){
-  			obj.find("img").eq(0).animate({"margin-top":marginTop+50+"px"},300).animate({"margin-top":marginTop+"px"},300);
-  			obj.animate({"opacity":1},700);
-  		}
-  		if(num == 5 || num == 6 || num == 7){
-  			obj.find("img").eq(0).animate({"margin-top":marginTop+"px"},300);
-  			obj.animate({"opacity":1},300);
-  			obj.find("img").eq(1).addClass("m567-left").css("visibility","visible");
-  			obj.find("img").eq(2).addClass("m567-right").css("visibility","visible");
-  		}
-		if(num >=4 && num < 9){
+  		vMove(obj,num,marginTop);
+  	}
+  	function vMove(obj,num,marginTop){
+  		if(num >=4 && num < 9){
+	  		if(num == 4 || num == 8){
+	  			obj.find("img").eq(0).animate({"margin-top":marginTop+50+"px"},300).animate({"margin-top":marginTop+"px"},300);
+	  			obj.animate({"opacity":1},700);
+	  		}
+	  		else{
+	  			obj.find("img").eq(0).animate({"margin-top":marginTop+"px"},300);
+	  			obj.animate({"opacity":1},300);
+	  			obj.find("img").eq(1).addClass("m567-left").css("visibility","visible");
+	  			obj.find("img").eq(2).addClass("m567-right").css("visibility","visible");
+	  		}
 			r567(num+1);
 			r567(num-1);
 		}
-
-  		return marginTop;
   	}
   	function re(key){
   		if(key > 3 && key <= 8){
@@ -83,8 +80,9 @@ $(document).ready(function () {
         $(".board,.popUp").hide();
     })
 
+    //PC or 横屏提示
     $(window).on("load resize",function(){
-    	console.log("resize or load");
+    	// console.log("resize or load");
     	var h = document.documentElement.clientHeight;
     	var w = document.documentElement.clientWidth;
     	if(h/w<1.32){
