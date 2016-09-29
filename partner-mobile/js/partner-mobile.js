@@ -38,7 +38,7 @@ $(document).ready(function () {
     	var w = document.documentElement.clientWidth;
         // 横纵比调试
         if(h/w<1.44&&h/w>=1.32){
-            $(".swiper-slide").css({"width":"84%","padding":"0 5%"});
+            $(".swiper-slide").css({"width":"84%","padding":"0 7%"});
         }
         // 横屏提示
     	if(h/w<1.32){
