@@ -37,9 +37,10 @@ $(document).ready(function () {
     	var h = document.documentElement.clientHeight;
     	var w = document.documentElement.clientWidth;
         // 横纵比调试
-        if(h/w<1.44&&h/w>=1.32){
+        if(h/w<1.5&&h/w>=1.32){
             $(".swiper-slide").css({"width":"84%","padding":"0 7%"});
             $(".slide10 .service-way .y-num").css("font-size","2rem");
+            $(".popUp").css("height","50%");
         }
         // 横屏提示
     	if(h/w<1.32){
