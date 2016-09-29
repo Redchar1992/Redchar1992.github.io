@@ -36,6 +36,11 @@ $(document).ready(function () {
     	// console.log("resize or load");
     	var h = document.documentElement.clientHeight;
     	var w = document.documentElement.clientWidth;
+        // 横纵比调试
+        if(h/w<1.44&&h/w>=1.32){
+            $(".swiper-slide").css({"width":"84%","padding":"0 5%"});
+        }
+        // 横屏提示
     	if(h/w<1.32){
     		$(".judge").css({"height":h,"line-height":h+"px"}).show();
     	}
