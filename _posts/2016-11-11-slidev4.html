@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="https://redchar1992.github.io/css/816/common.css"/>
+    <style>
+    	.kuang{
+    		height: 156px;
+    		background: #aff;
+    		overflow: hidden;
+    		text-align: center;
+    	}
+		.ff-sites{
+			height: 156px;
+    		/*margin-top: 50px;*/
+		}
+    	.ff-sites .sites-item{
+    		padding: 30px 20px;
+    		display: inline-block;
+    		float: left;
+    	}
+    	@media screen and (min-width: 700px){
+        	body{background: #f00;}
+        	.moveUp {
+        		animation: move-up .3s forwards;
+    		} 
+    	}
+    	.bar{
+    		width: 100%;
+    		height: 156px;
+    		overflow: hidden;
+    		background: #aff;
+    	}
+    	
+    	.animateSlide{
+    		animation: slide 0.5s 0s forwards;
+    	}
+    	@keyframes slide{
+    		from{}
+    		to{margin-left: -375px;}
+    	}
+    </style>
+    <title>网址拖拽测试</title>
+    <div class="bar">
+    <div class="ff-sites clearfix">
+    	<div class="kuang fl">
+    	
+    		<div class="sites-item">百度</div>
+	    	<div class="sites-item">新浪</div>
+	    	<div class="sites-item">微博</div>
+	    	<div class="sites-item">腾讯视频</div>
+	    	<div class="sites-item">58同城</div>
+	    	<div class="sites-item">网站06</div>
+	    	<div class="sites-item">网站07</div>
+	    	<div class="sites-item">网站08</div>
+	    </div>
+	    <div class="kuang fl">
+	    	<div class="sites-item">网站09</div>
+	    	<div class="sites-item">网站10</div>
+	    	<div class="sites-item">网站11</div>
+	    	<div class="sites-item">网站12</div>
+	    	<div class="sites-item">网站13</div>
+	    	<div class="sites-item">网站14</div>
+	    	<div class="sites-item">网站15</div>
+	    	<div class="sites-item">网站16</div>
+	    </div>
+	    <div class="kuang fl">
+	    	<div class="sites-item">网站17</div>
+	    	<div class="sites-item">网站18</div>
+	    	<div class="sites-item">网站19</div>
+	    </div>
+    		
+    </div>
+    </div>
+    <script type="text/javascript">
+		var scrWidth = document.documentElement.clientWidth;	//屏幕宽度
+		var mDis = 0;
+		var startX = 0;											//初始位置
+		var distance = 0;										//移动距离
+		var startTime = 0;										//初始时间
+		var curPageIndex = 0;									//当前页码
+		var kuang = document.getElementsByClassName("kuang");	//单屏容器
+		for(var i=0;i<kuang.length;i++){
+			kuang[i].style.width = scrWidth + "px";				//单屏容器的宽
+		}
+
+		var ffSites = document.getElementsByClassName("ff-sites")[0];	//大容器
+		ffSites.style.width = scrWidth * 3 + "px";						//大容器的宽
+
+		function moveToPage(distance) {								//拖动的情况
+		    var sites = document.getElementById("sites-items");
+		    var touchDelta = distance + this.startTranslate;
+		    sites.style.transform = sites.style.webkitTransform = "translate3d(" + touchDelta + "px,0,0)";
+		}
+		function touchStartFunc(evt){								//touchstart	
+			var x = evt.touches[0].screenX;
+		    startX = x;												//记录初始坐标
+		    startTime = new Date().getTime();
+		}
+		function touchMoveFunc(evt){								//未禁止默认事件的touchm
+		//	evt.preventDefault();
+			var x = evt.touches[0].screenX;
+		    distance = x - startX;									//记录移动距离
+		}
+		function touchEndFunc(evt){									//touchEnd
+			var time = new Date().getTime() - startTime;
+			if(time < 300 && Math.abs(distance) > 50 || Math.abs(distance) > scrWidth/2){
+				if(distance > 0){
+					curPageIndex --;
+				}
+				else if(distance < 0){
+					curPageIndex ++;
+				}
+				moveAnimate(curPageIndex,distance);
+			}
+		}
+
+		function moveAnimate(posit,ds){
+		    var sites = document.getElementsByClassName("ff-sites")[0];
+		    var translates = sites.style.transform;
+		    sites.classList.add("animateSlide");
+//			var count;
+//		    if(!translates) {
+//		        translates = sites.style.webkitTransform;
+//		    }
+//		    if(translates) {
+//		        count = parseFloat(translates.toString().substring(12).split(',')[0]);
+//		    }
+//		    if(isNaN(count)){
+//		    	count = 0;
+//		    }
+//		//	sites.style.transform = sites.style.webkitTransform = "translate3d(" + posit + "px,0,0)";
+//			clearInterval(timer);
+//			var timer = setInterval(function(){
+//				if(count != posit){
+//					count += ds/10;
+//					sites.style.transform = sites.style.webkitTransform = "translate3d(" + count + "px,0,0)";
+//				}
+//				else{
+//					clearInterval(timer);
+//				}
+//				if(Math.abs(count-posit)<10 || count > 0 || count < -scrWidth*2){
+//					sites.style.transform = sites.style.webkitTransform = "translate3d(" + posit + "px,0,0)";
+//					clearInterval(timer);
+//				}
+//			},10);
+		}
+
+function bindEvent() {
+    document.addEventListener('touchstart', touchStartFunc, false);
+    document.addEventListener('touchmove', touchMoveFunc, false);
+    document.addEventListener('touchend', touchEndFunc, false);
+}
+
+function isTouchDevice() {
+    try {
+        document.createEvent("TouchEvent");
+        bindEvent(); //绑定事件
+    } catch (e) {
+        console.log("不支持TouchEvent事件！" + e.message);
+    }
+}
+
+isTouchDevice();
+   		
+    </script>
+</head>
+<body>
+	
+</body>
+</html>
