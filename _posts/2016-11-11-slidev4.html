@@ -24,7 +24,7 @@
         	body{background: #f00;}
         	.moveUp {
         		animation: move-up .3s forwards;
-    		} 
+    		}
     	}
     	.bar{
     		width: 100%;
@@ -35,20 +35,20 @@
     	
     	.animateSlide{
     		animation: slide 0.5s 0s forwards;
-			-webkit-animation: slide 0.5s 0s forwards;
+    		-webkit-animation: slide 0.5s 0s forwards;
     	}
     	@keyframes slide{
+    		/*from{}
+    		to{margin-left: -375px;}*/
+    	}
+    	/*@-webkit-keyframes slide{
     		from{}
     		to{margin-left: -375px;}
-    	}
-		@-webkit-keyframes slide{
-    		from{}
-    		to{margin-left: -375px;}
-    	}
+    	}*/
     </style>
     <title>网址拖拽测试</title>
     <div class="bar">
-    <div class="ff-sites clearfix">
+    <div class="ff-sites clearfix" id="sites-items">
     	<div class="kuang fl">
     	
     		<div class="sites-item">百度</div>
@@ -99,9 +99,17 @@
 		    sites.style.transform = sites.style.webkitTransform = "translate3d(" + touchDelta + "px,0,0)";
 		}
 		function touchStartFunc(evt){								//touchstart	
+			var sites = document.getElementById("sites-items");
 			var x = evt.touches[0].screenX;
 		    startX = x;												//记录初始坐标
-		    startTime = new Date().getTime();
+		    var newTime = new Date().getTime();
+		    if((newTime - startTime)>500){
+		    	startTime = newTime;
+		    }
+		    else{
+		    	return false;
+		    }
+		    sites.classList.remove("animateSlide");
 		}
 		function touchMoveFunc(evt){								//未禁止默认事件的touchm
 		//	evt.preventDefault();
@@ -111,63 +119,73 @@
 		function touchEndFunc(evt){									//touchEnd
 			var time = new Date().getTime() - startTime;
 			if(time < 300 && Math.abs(distance) > 50 || Math.abs(distance) > scrWidth/2){
-				if(distance > 0){
+				if(distance > 0 && curPageIndex > 0){
 					curPageIndex --;
 				}
-				else if(distance < 0){
+				else if(distance < 0 && curPageIndex < 2){
 					curPageIndex ++;
 				}
 				moveAnimate(curPageIndex,distance);
 			}
 		}
-
-		function moveAnimate(posit,ds){
+		
+		function moveAnimate(curPageIndex,distance){
 		    var sites = document.getElementsByClassName("ff-sites")[0];
 		    var translates = sites.style.transform;
+		    
 		    sites.classList.add("animateSlide");
-//			var count;
-//		    if(!translates) {
-//		        translates = sites.style.webkitTransform;
-//		    }
-//		    if(translates) {
-//		        count = parseFloat(translates.toString().substring(12).split(',')[0]);
-//		    }
-//		    if(isNaN(count)){
-//		    	count = 0;
-//		    }
-//		//	sites.style.transform = sites.style.webkitTransform = "translate3d(" + posit + "px,0,0)";
-//			clearInterval(timer);
-//			var timer = setInterval(function(){
-//				if(count != posit){
-//					count += ds/10;
-//					sites.style.transform = sites.style.webkitTransform = "translate3d(" + count + "px,0,0)";
-//				}
-//				else{
-//					clearInterval(timer);
-//				}
-//				if(Math.abs(count-posit)<10 || count > 0 || count < -scrWidth*2){
-//					sites.style.transform = sites.style.webkitTransform = "translate3d(" + posit + "px,0,0)";
-//					clearInterval(timer);
-//				}
-//			},10);
-		}
+		    
+		    var add = setTimeout(function(){
+		    	sites.style.marginLeft = -curPageIndex*scrWidth+"px";
+		    },501);
+		    
+		    
+		    var cssRule;
 
-function bindEvent() {
+	  		// Returns a reference to the specified CSS rule(s).
+			function getRule() {
+			    var rule;
+			    var ss = document.styleSheets;
+			    console.log(ss);
+			    for (var i = 0; i < ss.length; ++i) {
+			        // loop through all the rules!
+				    for (var x = 0; x < ss[i].cssRules.length; ++x) {
+				        rule = ss[i].cssRules[x];
+				        if (rule.name == "slide" && rule.type == CSSRule.KEYFRAMES_RULE) {
+				            cssRule = rule;
+			            }
+			        }
+			    }
+			}
+			
+			getRule();
+			//然后就简单了, 大致如下这些东东.
+			var scale = 1;
+			console.log(cssRule);
+			cssRule.deleteRule("0%");
+			cssRule.deleteRule("100%");
+	//		cssRule.appendRule("0% { transform: translateY(-150px) "      + scale +"; opacity: 0; }");
+			cssRule.appendRule("0% {  }");
+			cssRule.appendRule("100% { margin-left:-"+curPageIndex*scrWidth+"px }");
+		}
+		
+
+//function bindEvent() {
     document.addEventListener('touchstart', touchStartFunc, false);
     document.addEventListener('touchmove', touchMoveFunc, false);
     document.addEventListener('touchend', touchEndFunc, false);
-}
-
-function isTouchDevice() {
-    try {
-        document.createEvent("TouchEvent");
-        bindEvent(); //绑定事件
-    } catch (e) {
-        console.log("不支持TouchEvent事件！" + e.message);
-    }
-}
-
-isTouchDevice();
+//}
+//
+//function isTouchDevice() {
+//  try {
+//      document.createEvent("TouchEvent");
+//      bindEvent(); //绑定事件
+//  } catch (e) {
+//      console.log("不支持TouchEvent事件！" + e.message);
+//  }
+//}
+//
+//isTouchDevice();
    		
     </script>
 </head>
