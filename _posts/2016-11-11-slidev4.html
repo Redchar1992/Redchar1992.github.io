@@ -35,8 +35,13 @@
     	
     	.animateSlide{
     		animation: slide 0.5s 0s forwards;
+			-webkit-animation: slide 0.5s 0s forwards;
     	}
     	@keyframes slide{
+    		from{}
+    		to{margin-left: -375px;}
+    	}
+		@-webkit-keyframes slide{
     		from{}
     		to{margin-left: -375px;}
     	}
