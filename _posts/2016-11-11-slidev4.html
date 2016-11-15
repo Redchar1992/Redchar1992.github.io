@@ -48,7 +48,7 @@
     </style>
     <title>网址拖拽测试</title>
     <div class="bar">
-    <div class="ff-sites clearfix" id="sites-items">
+    <div class="ff-sites clearfix" id="sites-items" style="margin-left:0">
     	<div class="kuang fl">
     	
     		<div class="sites-item">百度</div>
@@ -80,7 +80,6 @@
     </div>
     <script type="text/javascript">
 		var scrWidth = document.documentElement.clientWidth;	//屏幕宽度
-		var mDis = 0;
 		var startX = 0;											//初始位置
 		var distance = 0;										//移动距离
 		var startTime = 0;										//初始时间
@@ -95,8 +94,13 @@
 
 		function moveToPage(distance) {								//拖动的情况
 		    var sites = document.getElementById("sites-items");
-		    var touchDelta = distance + this.startTranslate;
-		    sites.style.transform = sites.style.webkitTransform = "translate3d(" + touchDelta + "px,0,0)";
+		    var sitesMargin = parseInt(sites.style.marginLeft);		    
+			if(curPageIndex == 0 && distance > 0 || curPageIndex == 2 && distance < 0){
+				sites.style.marginLeft = distance/10 - curPageIndex * scrWidth + "px";
+			}
+			else{
+				sites.style.marginLeft = distance - curPageIndex * scrWidth + "px";
+			}
 		}
 		function touchStartFunc(evt){								//touchstart	
 			var sites = document.getElementById("sites-items");
@@ -115,6 +119,7 @@
 		//	evt.preventDefault();
 			var x = evt.touches[0].screenX;
 		    distance = x - startX;									//记录移动距离
+		    moveToPage(distance);
 		}
 		function touchEndFunc(evt){									//touchEnd
 			var time = new Date().getTime() - startTime;
@@ -125,8 +130,9 @@
 				else if(distance < 0 && curPageIndex < 2){
 					curPageIndex ++;
 				}
-				moveAnimate(curPageIndex,distance);
+				
 			}
+			moveAnimate(curPageIndex,distance);
 		}
 		
 		function moveAnimate(curPageIndex,distance){
@@ -159,34 +165,19 @@
 			}
 			
 			getRule();
-			//然后就简单了, 大致如下这些东东.
+
 			var scale = 1;
 			console.log(cssRule);
 			cssRule.deleteRule("0%");
 			cssRule.deleteRule("100%");
-	//		cssRule.appendRule("0% { transform: translateY(-150px) "      + scale +"; opacity: 0; }");
 			cssRule.appendRule("0% {  }");
 			cssRule.appendRule("100% { margin-left:-"+curPageIndex*scrWidth+"px }");
 		}
 		
+    	document.addEventListener('touchstart', touchStartFunc, false);
+    	document.addEventListener('touchmove', touchMoveFunc, false);
+    	document.addEventListener('touchend', touchEndFunc, false);
 
-//function bindEvent() {
-    document.addEventListener('touchstart', touchStartFunc, false);
-    document.addEventListener('touchmove', touchMoveFunc, false);
-    document.addEventListener('touchend', touchEndFunc, false);
-//}
-//
-//function isTouchDevice() {
-//  try {
-//      document.createEvent("TouchEvent");
-//      bindEvent(); //绑定事件
-//  } catch (e) {
-//      console.log("不支持TouchEvent事件！" + e.message);
-//  }
-//}
-//
-//isTouchDevice();
-   		
     </script>
 </head>
 <body>
