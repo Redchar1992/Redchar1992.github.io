@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=no"/>
+    <title>2015最飞羊的新春祝愿</title>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<div id="main">
+    <!--<img id="wx" src="images/share.png"/>-->
+
+    <div id="container"></div>
+
+    <img id="txt1" src="images/txt1.png"/>
+    <img id="txt2" src="images/txt2.png"/>
+    <img id="txt3" src="images/txt3.png"/>
+    <img id="txt4" src="images/txt4.png"/>
+    <img id="txt5" src="images/txt5.png"/>
+    <img id="btnShare" src="images/btnShare.png"/>
+    <img id="btnShare2" src="images/btnShare2.png"/>
+
+    <img id="title" src="images/title.png"/>
+    <div id="loading">
+        <div class="bg"></div>
+        <img class="pic" src="images/loading/firecrackers.gif"/>
+        <div class="txt"></div>
+    </div>
+
+    <div id="no">
+        <!--<img class="bg" src="images/no/bg.jpg"/>-->
+        <!--<img class="light" src="images/no/light.png"/>-->
+        <!--<img class="txt" src="images/no/txt.png"/>-->
+    </div>
+
+    <div id="share">
+        <div class="bg"></div>
+        <img class="txt1" src="images/share/txt1.png"/>
+        <img class="txt2" src="images/share/txt2.png"/>
+    </div>
+
+    <img id="muteOn" src="images/muteOn.png"/>
+    <img id="muteOff" src="images/muteOff.png"/>
+    <img id="logo" src="images/logo.png"/>
+
+    <canvas id="canvas" width="768" height="768">
+    </canvas>
+    <audio id="bgm" src="sounds/bgm.mp3" autoplay="autoplay" loop="loop">
+    </audio>
+</div>
+
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/three.min.js"></script>
+<!--<script type="text/javascript" src="js/renderers/Projector.js"></script>-->
+<!--<script type="text/javascript" src="js/renderers/CanvasRenderer.js"></script>-->
+<script type="text/javascript" src="js/loaders/OBJLoader.js"></script>
+<!--<script type="text/javascript" src="js/stats.min.js"></script>-->
+<script type="text/javascript" src="js/TweenLite.min.js"></script>
+<script type="text/javascript" src="js/plugins/CSSPlugin.min.js"></script>
+<!--<script type="text/javascript" src="js/snabbt.min.js"></script>-->
+<!--<script type="text/javascript" src="js/modernizr.custom.34097.js"></script>-->
+<script type="text/javascript" src="js/ua-parser.min.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
+
+<script type="text/javascript">
+    var amObj = {
+        title:"快收下2015最飞羊的新春祝愿",
+        desc:"坚持梦想，一路挺你。请确认你的手机系统为IOS8或安卓4.3.3以上Chrome浏览器。",
+        link:"http://www.vmlim20.com.cn/demo/2015cny/",
+        imgUrl:"http://www.vmlim20.com.cn/demo/2015cny/images/share.png"
+    }
+
+    var tlObj = {
+        title:"快收下2015最飞羊的新春祝愿",
+        desc:"坚持梦想，一路挺你。请确认你的手机系统为IOS8或安卓4.3.3以上Chrome浏览器。",
+        link:"http://www.vmlim20.com.cn/demo/2015cny/",
+        imgUrl:"http://www.vmlim20.com.cn/demo/2015cny/images/share.png"
+    }
+
+    wx.ready(function(){
+        wx.onMenuShareAppMessage(amObj);
+        wx.onMenuShareTimeline(tlObj);
+    })
+
+    wx.error(function(res){
+        alert("验证未成功")
+    })
+
+    function getwxshareconfig() {
+        var config = {};
+        $.ajax({
+            url: "http://wx.im20.com.cn/WxApi/getSignPackage",
+            type: "GET",
+            dataType: 'jsonp',
+            jsonp: 'imCallback',
+            success: function (json) {
+                arrconfig=JSON.stringify(json);
+                config.debug=false;
+                config.appId = json.data.appId;
+                config.timestamp = json.data.timestamp;
+                config.nonceStr = json.data.nonceStr;
+                config.signature = json.data.signature;
+                config.rawString = json.data.rawString;
+                config.jsApiList =['onMenuShareAppMessage','onMenuShareTimeline','hideOptionMenu'];
+                wx.config(config);
+            }
+        });
+    }
+
+    getwxshareconfig();
+
+</script>
+
+</body>
+</html>
