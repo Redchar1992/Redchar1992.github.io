@@ -1,0 +1,52 @@
+{
+    "status": "success",
+    "data": {
+        "products": [
+            {
+                "name": "PEMBRIDGE",
+                "description": "红，爱你如初，热情不褪色<br />经典Dottic压纹皮革,精致更显气质"
+            },
+            {
+                "name": "PEMBRIDGE",
+                "description": "紫，独特魅力，爱不释手<br />金属字母装饰，独一无二"
+            },
+            {
+                "name": "BERKELEY",
+                "description": "黑白，最极致的颜色，最纯粹的爱<br />压花漆皮，多个隔层，兼具时尚与实用"
+            },
+            {
+                "name": "TROOPER",
+                "description": "黄，爱要让你看见<br />明亮柔软麂皮，演绎中性魅力"
+            },
+            {
+                "name": "MESSI",
+                "description": "绿，一见你就有好心情<br />粒面皮质，流线廓形，动感时髦"
+            },
+            {
+                "name": "MAGUS",
+                "description": "黑，包容一切，爱是包容<br />多功能设计，日常、商务和旅行都适用"
+            }
+        ],
+        "share": {
+            "chat": {
+                "birds": {
+                    "title": "这是%NAME1%和%NAME2%的爱情喜鹊",
+                    "description": "你是否走过属于你们的爱情银河？我们为牛郎织女架起鹊桥，让爱留在永恒宇宙！"
+                },
+                "other": {
+                    "title": "银河有多长？",
+                    "description": "你是否走过属于你们的爱情银河？我们为牛郎织女架起鹊桥，让爱留在永恒宇宙！"
+                }
+            },
+            "moments": {
+                "birds": {
+                    "title": "这是%NAME1%和%NAME2%的爱情喜鹊，你是否走过属于你们的爱情银河？我们为牛郎织女架起鹊桥，让爱留在永恒宇宙！"
+                },
+                "other": {
+                    "title": "银河有多长？"
+                }
+            }
+        }
+    },
+    "message": null
+}

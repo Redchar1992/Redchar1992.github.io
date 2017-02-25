@@ -331,12 +331,7 @@ body {
 	}
 
 	.slide3 .p3-1{
-		position: absolute;
-		z-index: 1;
-		top: 10%;
-		width: 40%;
-		left: 30%;
-
+		display: none;
 	}
 	.slide3 .p3-2{
 		margin-top: 15%;
